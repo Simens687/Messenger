@@ -1,0 +1,49 @@
+﻿<Window x:Class="ПУПУПУУУУУ.Old_chat"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ПУПУПУУУУУ"
+        mc:Ignorable="d"
+        Title="Old_chat" Height="550" Width="1050"
+        Closing="Window_Closing">
+    <Grid Background="#FF2E2E2E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.03*"/>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="0.02*"/>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="0.03*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Пользователи" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="Segoe UI Semibold" Foreground="White"/>
+
+        <ListBox Grid.Row="3" Grid.Column="1" Grid.RowSpan="7" FontFamily="Segoe UI" Foreground="White" FontSize="15" />
+
+        <ListBox Grid.Row="3" Grid.Column="3" Grid.RowSpan="6" Grid.ColumnSpan="3" FontFamily="Segoe UI" Foreground="White" FontSize="15" x:Name="Messages"/>
+
+        <Button Grid.Row="9" Grid.Column="3" FontFamily="Segoe UI" Foreground="White" Content="Выйти" FontSize="20" VerticalAlignment="Center" Click="Exit" />
+
+        <TextBox Grid.Row="9" Grid.Column="4" FontFamily="Segoe UI" Foreground="White" x:Name="Mes"
+            materialDesign:HintAssist.Hint="Введи сообщение" FontSize="20">
+        </TextBox>
+
+        <Button Grid.Row="9" Grid.Column="5" FontFamily="Segoe UI" Foreground="White" Content="Отправить" FontSize="20" VerticalAlignment="Center" Click="Send" />
+    </Grid>
+</Window>
